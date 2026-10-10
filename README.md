@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # Python 100 Days Challenge
 
 This repository documents my 100-day journey mastering Python.
