@@ -1,0 +1,5 @@
+server_name = "web-01"
+region = "us-east1"
+status = "running"
+
+print(f"Server {server_name} in {region} is {status}.")
