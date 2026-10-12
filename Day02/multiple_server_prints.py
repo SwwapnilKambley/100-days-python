@@ -1,9 +1,14 @@
-server_names = ["web-01", "web-02", "db-01"]
-regions = ["us-east1", "us-east1", "us-west2"]
-statuses = ["running", "stopped", "running"]
+statuses = ["running", "stopped", "running", "degraded", "stopped"]
+running = 0 
+for index in statuses:
+    if index == "running":
+        print("✅ Server is healthy")
+        running += 1
+    elif index == "stopped":
+        print("❌ Server is down")
+    elif index == "degraded":
+        print("⚠️ Server needs attention")
 
 
-for i in range(len(server_names)):
-    print(f"Server {server_names[i]} in {regions[i]} is {statuses[i]}.")
-
-print(f"Total servers checked: {len(server_names)}")
+print()
+print(f"Running servers = {running}")
